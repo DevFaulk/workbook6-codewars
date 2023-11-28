@@ -1,18 +1,21 @@
-daysList = [31,28,31,30,31,30,31,31,30,31,30,31]
-
-months = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"]
 
 def get_day(day, is_leap):
+    
+    daysList = [31,28,31,30,31,30,31,31,30,31,30,31]
+
+    months = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"]
+    
     if is_leap == True:
         daysList[1] = 29
         
     total = 0;
     i = 0;
     
-    while total < day:
+    while total < day and i < 12:
         total += daysList[i]
         i += 1
-    date = total - day
+    total -= daysList[i-1]
+    date = day - total
         
     return str(months[i-1]) + ", " + str(date)
 

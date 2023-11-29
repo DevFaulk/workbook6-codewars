@@ -1,11 +1,13 @@
 function positiveSum(arr) {
+  let sum = 0;
   arr.forEach(function (num, i) {
-    if (num[i] + num[i] == 0) {
+    if (num + num == 0) {
       arr.splice(i, 1);
-    } else if (num[i] == ' ') {
+    } else if (num == ' ') {
       arr.splice(i, 1);
-    }
+    } else return (sum += num);
   });
+  return sum;
 }
 
 // test cases

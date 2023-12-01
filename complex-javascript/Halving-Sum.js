@@ -8,3 +8,4 @@ function halvingSum(n) {
 
   return sum;
 }
+ 

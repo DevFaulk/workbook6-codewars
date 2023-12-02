@@ -8,4 +8,6 @@ function halvingSum(n) {
 
   return sum;
 }
- 
+
+console.log(halvingSum(25));
+console.log(halvingSum(127));
